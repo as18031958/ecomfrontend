@@ -1,0 +1,113 @@
+/* Global styles */
+body {
+    font-family: sans-serif;
+    /* margin: 0;
+    padding: 0; */
+    background-color:#1d8f89;
+   
+    min-height: 100vh;
+  }
+  
+ 
+  form {
+    margin-top: 5px; 
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #fff;
+    text-align: center;
+    padding: 20px;
+    border-radius: 8px; /* Modern and soft radius */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05); /* Subtle shadow */
+    max-width: 400px; /* Adjust as needed */
+  }
+  
+  /* Heading styling */
+  h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 24px; /* Increased size */
+    color: #4CAF50; /* Attractive, brand-consistent color */
+  }
+  
+  /* Input group styling */
+  .input-group {
+    margin-bottom: 10px;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  /* Label styling */
+  label {
+    display: block;
+    margin-bottom: 5px;
+    font-size: 25px; /* Slightly smaller, better contrast */
+    color: #9f41a4; /* Darker gray for better contrast */
+  }
+  
+  /* Input and textarea styling */
+  input {
+    width: 100%;
+    padding: 2px;
+    border: 2px solid transparent; /* Clear default gray border */
+    background-color: #f5f5f5; /* Lighter background for better feel */
+    font-size: 16px;
+    transition: border-color 0.2s ease-in-out; /* Smooth border transition */
+    border-radius: 4px; /* Maintain subtle rounding */
+  }
+  
+  input:focus,
+  textarea:focus {
+    border-color: #4CAF50; /* Attractive focus color */
+  }
+  
+  /* Button styling */
+  button {
+    background-color: #00c853; /* Vibrant green */
+    border: none;
+    border-radius: 5px; /* Slightly decreased radius */
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.2s ease-in-out; /* Smooth background transition */
+    font-size: 16px; /* Increased font size */
+    color: #fff; /* White text for contrast */
+  }
+  
+  button:hover {
+    background-color: #00ad43; /* Darken green on hover */
+  }
+  
+  /* Error message styling */
+  .error {
+    color: red;
+    font-size: 12px;
+    margin-top: 5px;
+  }
+  
+  /* Optional placeholder animation (consider using external library for best results) */
+  /* ... */
+  
+  /* Enhance visual hierarchy and overall aesthetics (consider more styles) */
+  /* ... */
+  
+  /* Responsive design adaptations (use media queries for various screen sizes) */
+  @media (max-width: 768px) {
+    /* Adapt styles for smaller screens, such as: */
+    .container {
+      max-width: 320px; /* Adjust as needed */
+    }
+    h1 {
+      font-size: 20px; /* Adjust as needed */
+    }
+    input, textarea {
+      font-size: 14px; /* Adjust as needed */
+    }
+    button {
+      font-size: 14px; /* Adjust as needed */
+    }
+  }
+  
+  /* @media (max-width: 480px) {
+    /* Further adaptations for even smaller screens */
+    /* ... */
+  /* } */
+   

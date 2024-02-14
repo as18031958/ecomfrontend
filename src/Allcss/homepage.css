@@ -1,0 +1,110 @@
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.carousel-wrapper{
+    margin-top: 2px;
+}
+.carousel-image {
+    height: 500px;
+    width: 100%;
+    object-fit: cover;
+  }
+  .thumb{
+    height: 20px;
+    /* opacity: 0; */
+  }
+  h2{
+    color: rgb(168, 57, 13);
+    text-align: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: 800;
+  }
+  .Btn{
+    margin-left: 75%;
+  }
+ 
+        .product-card {
+            display: flex;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 16px;
+            margin-bottom: 16px;
+        }
+
+        /* Image container */
+        .product-image {
+            flex: 1;
+            max-width: 100%;
+            overflow: hidden;
+        }
+
+        .product-image img {
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+        }
+    .product-image {
+            flex: 1;
+            max-width: 100%;
+            overflow: hidden;
+        }
+
+        .product-image img  {
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+        }
+
+        /* Product info container */
+        .product-info {
+            flex: 2;
+            padding-left: 16px;
+        }
+
+        .product-title {
+            font-size: 18px;
+            font-weight: bold;
+            margin-bottom: 8px;
+        }
+
+        .product-description {
+            font-size: 14px;
+            color: #666;
+            margin-bottom: 12px;
+        }
+
+        .product-price {
+            font-size: 16px;
+            font-weight: bold;
+            color: #007bff;
+        }
+
+        .add-to-cart {
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            padding: 8px 16px;
+            cursor: pointer;
+        }
+
+        .add-to-cart:hover {
+            background-color: #0056b3;
+        }
+  
+
+  
+  /* Optional responsiveness using media queries */
+  @media (max-width: 768px) {
+    .product-card {
+      width: 50%; /* Adjust for desired layout on smaller screens */
+    }
+  }
+  
+  
+  
+  
+  
+  
