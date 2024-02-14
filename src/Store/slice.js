@@ -5,7 +5,7 @@ import axios from 'axios';
 export const fetchProducts = createAsyncThunk(
   'product/fetchProducts',
   async () => {
-    const response = await axios.get('https://ecombackend-qgpr.onrender.com/product');
+    const response = await axios.get('https://ecombackend-qgpr.onrender.com/api/products');
     return response.data;
   }
 );
