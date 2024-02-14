@@ -14,7 +14,7 @@ const Login = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const res = await axios.post('/api/login', { email, password });
+      const res = await axios.post('https://ecombackend-qgpr.onrender.com/api/login', { email, password });
       if (res.data.success) {
         toast.success(res.data && res.data.message);
         console.log(res.data.user); 
