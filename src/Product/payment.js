@@ -19,7 +19,7 @@ const Payment = () => {
   // Get payment gateway token
   const getToken = async () => {
     try {
-      const { data } = await axios.get("/api/braintree/token");
+      const { data } = await axios.get("https://ecombackend-qgpr.onrender.com/api/braintree/token");
       setClientToken(data?.clientToken);
     } catch (error) {
       console.error("Error fetching client token:", error);
@@ -32,7 +32,7 @@ const Payment = () => {
     try {
       setLoading(true);
       const { nonce } = await instance.requestPaymentMethod();
-      await axios.post("/api/braintree/payment", {
+      await axios.post("https://ecombackend-qgpr.onrender.com/api/braintree/payment", {
         nonce,
         cartItems,
       });
