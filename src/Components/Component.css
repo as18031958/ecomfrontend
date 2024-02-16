@@ -385,6 +385,7 @@ font-family: sans-serif;
     align-self: center;
     text-align: center;
     flex-direction: column;
+    overflow-y: hidden;
   }
   .bodyone{
     display: inline;
@@ -408,7 +409,6 @@ font-family: sans-serif;
   }
 
 }
-
 .product-card img{
   margin-left:30%
 }
