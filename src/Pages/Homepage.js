@@ -2,7 +2,7 @@ import React, { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { fetchProducts,addToCart } from '../Store/slice'; 
 import Layout from '../Components/Layout';
-import { useNavigate } from 'react-router-dom';
+// import { useNavigate } from 'react-router-dom';
 import toast from 'react-hot-toast';
 import CarouselComponent from './corousel';
 // import '../Allcss/homepage.css'
@@ -11,7 +11,7 @@ import { NavLink } from 'react-router-dom';
 
 
 const Homepage = () => {
-  const navigate= useNavigate()
+  // const navigate= useNavigate()
   const dispatch = useDispatch();
   const products = useSelector((state) => state.product.products); // Access products correctly
 
@@ -20,10 +20,10 @@ const Homepage = () => {
   }, [dispatch]);
 
   
-  const handleLogout=()=>{
-  localStorage.removeItem('token');
-  navigate('/login')
-  }
+  // const handleLogout=()=>{
+  // localStorage.removeItem('token');
+  // navigate('/login')
+  // }
   const handleClick = (itemId) => {
     dispatch(addToCart(itemId)); // Use addToCart action instead of AddToCart
     toast.success("Added to cart");
@@ -34,7 +34,7 @@ const Homepage = () => {
     <Layout title={'Home-page'}>
    <div className='heading'>
     <h2>HOMEPAGE</h2>
-    <button className='Btn' onClick={handleLogout}>Logout</button>
+    {/* <button className='Btn' onClick={handleLogout}>Logout</button> */}
     </div>
       <CarouselComponent/>
       <div className='bodyone'>

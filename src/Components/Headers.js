@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import { NavLink } from 'react-router-dom';
+import React, { useState,useEffect } from 'react';
+import { NavLink, useNavigate } from 'react-router-dom';
 import './Component.css'; // Import your CSS file for styling
 import { FaCartArrowDown } from "react-icons/fa";
 import { GiShop } from "react-icons/gi";
@@ -12,8 +12,21 @@ import { GiShop } from "react-icons/gi";
 const Headers = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [isProductsDropdownOpen, setIsProductsDropdownOpen] = useState(false);
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
+  const navigate = useNavigate()
 
-  
+  const handleLogout = () => {
+    localStorage.removeItem('token');
+    setIsLoggedIn(false); // Update login state
+    navigate('/login'); // Redirect to login page
+  };
+
+  useEffect(() => {
+    const token = localStorage.getItem('token');
+    if (token) {
+      setIsLoggedIn(true); // Update login state if token exists
+    }
+  }, []);
 
   const toggleHamburgerMenu = () => {
     setIsOpen(!isOpen);
@@ -46,8 +59,19 @@ const Headers = () => {
          )}
          </NavLink>
         </li>
-        <li><NavLink to="/register">Register</NavLink></li>
-        <li><NavLink to="/login">Login</NavLink></li>
+
+        {isLoggedIn ? (
+          <>
+          <li>
+            <button onClick={handleLogout}>Logout</button>
+          </li>
+          </>
+        ) : (
+          <>
+            <li><NavLink to="/register">Register</NavLink></li>
+            <li><NavLink to="/login">Login</NavLink></li>
+          </>
+        )}
         <li><NavLink to="/addtocart"><FaCartArrowDown style={{ fontSize: 24 }} /></NavLink></li>
       </ul>
       <button className="hamburger-menu" onClick={toggleHamburgerMenu}>
@@ -74,8 +98,18 @@ const Headers = () => {
             </ul>
          )}
         </li>
-          <li><NavLink to="/register">Register</NavLink></li>
-          <li><NavLink to="/login">Login</NavLink></li>
+        {isLoggedIn ? (
+          <>
+          <li>
+            <button onClick={handleLogout}>Logout</button>
+          </li>
+          </>
+        ) : (
+          <>
+            <li><NavLink to="/register">Register</NavLink></li>
+            <li><NavLink to="/login">Login</NavLink></li>
+          </>
+        )}
           <li><NavLink to="/addtocart">Cart</NavLink></li>
         </div>
       )}
