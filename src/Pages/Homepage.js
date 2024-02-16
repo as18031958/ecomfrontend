@@ -20,10 +20,7 @@ const Homepage = () => {
   }, [dispatch]);
 
   
-  // const handleLogout=()=>{
-  // localStorage.removeItem('token');
-  // navigate('/login')
-  // }
+  
   const handleClick = (itemId) => {
     dispatch(addToCart(itemId)); // Use addToCart action instead of AddToCart
     toast.success("Added to cart");
@@ -34,7 +31,7 @@ const Homepage = () => {
     <Layout title={'Home-page'}>
    <div className='heading'>
     <h2>HOMEPAGE</h2>
-    {/* <button className='Btn' onClick={handleLogout}>Logout</button> */}
+    
     </div>
       <CarouselComponent/>
       <div className='bodyone'>

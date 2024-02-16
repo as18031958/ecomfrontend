@@ -385,7 +385,7 @@ font-family: sans-serif;
     align-self: center;
     text-align: center;
     flex-direction: column;
-    overflow-y: hidden;
+    /* overflow-y: hidden; */
   }
   .bodyone{
     display: inline;
