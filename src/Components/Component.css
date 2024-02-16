@@ -407,7 +407,11 @@ font-family: sans-serif;
     margin-right:50%;
   
   }
+  .cart-img img{
+    height: 100px;
+    width: 50%; 
 
+}
 }
 .product-card img{
   margin-left:30%
