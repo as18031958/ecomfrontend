@@ -3,6 +3,7 @@ import React from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { removeFromCart, increment, decrement } from '../Store/slice';
 import '../App.css';
+import Layout from '../Components/Layout';
 import { useNavigate } from 'react-router-dom';
 
 const AddToCart = () => {
@@ -26,6 +27,7 @@ const AddToCart = () => {
 
   return (
     <div>
+       <Layout title={'Home-page'}>
       <h2>Shopping Cart</h2>
       <div className="cart-container">
         {cartItems.map(item => (
@@ -48,6 +50,7 @@ const AddToCart = () => {
       <div className='payment'>
         <button onClick={()=>navigate('/payment')}>Check Out</button>
       </div>
+      </Layout>
     </div>
   );
 }

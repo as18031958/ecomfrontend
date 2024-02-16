@@ -5,6 +5,7 @@ import Layout from '../Components/Layout';
  import toast from 'react-hot-toast';
  import CarouselComponent from '../Pages/corousel'
 import '../Allcss/homepage.css'
+import { NavLink } from 'react-router-dom';
 
 const Sunglasses = () => {
   const dispatch = useDispatch();
@@ -25,40 +26,58 @@ const Sunglasses = () => {
       <Layout title={'Home-page'}>
       <div className='heading'>
     <h2>SUNGLASSES</h2>
-    {/* <button className='Btn' onClick={handleLogout}>Logout</button> */}
     </div>
       <CarouselComponent/>
-      
-      
-      <div className='main-container'>
-    
-    {/* <button onClick={handleLogout}>Logout</button> */}
-      {products && products
-          .filter((item) => ['sunglasses'].includes(item.category))
-
-          .map((item) => (
-
-        <div key={item._id} className="blog-item">
-         <div class="product-card">
-  <img src={`${item.thumbnail}`} alt="Thumbnail" />
-  <div class="product-info">
-    <p class="title">{item.title}</p>
-    <p class="brand">{item.brand}</p>
-    <p class="description">{item.description.slice(0, 100)}</p>
-    <div class="details">
-      <p class="price">{item.price}</p>
-      <p class="rating">{item.rating}</p>
-      <p class="category">{item.category}</p>
-    </div>
-    <button class="add-to-cart" onClick={() => handleClick(item.id)}>Add to Cart</button>
-  </div>
+      <div className='bodyone'>
+  {products && products
+    .filter((item) => ['sunglasses'].includes(item.category)).slice(0,3)
+    .map((item) => (
+      <div key={item._id} className="container">
+        <div class="wrapper">
+          <NavLink to={`/dynamic/${item.id}`}>
+            <img className={"banner-image"} src={`${item.thumbnail}`} alt="Thumbnail" />
+          </NavLink>
+          <h1>{item.title}</h1>
+          
+          </div>
+          <div class="details">
+            <p class="price">PRICE: {item.price} Rupees</p>
+            <p class="rating">RATING: {item.rating}</p>
+          </div>
+          <div className='button-wrapper'>
+          <p class="description">{item.description.slice(0, 40)}</p>
+            <button class="btn add-to-cart" onClick={() => handleClick(item.id)}>Add to Cart</button>
+          </div>
+        </div>
+       
+    ))}
 </div>
 
-         
-
+<div className='bodyone'>
+  {products && products
+    .filter((item) => ['sunglasses'].includes(item.category)).slice(3,5)
+    .map((item) => (
+      <div key={item._id} className="container">
+        <div class="wrapper">
+          <NavLink to={`/dynamic/${item.id}`}>
+            <img className={"banner-image"} src={`${item.thumbnail}`} alt="Thumbnail" />
+          </NavLink>
+          <h1>{item.title}</h1>
+          
+          </div>
+          <div class="details">
+            <p class="price">PRICE: {item.price} Rupees</p>
+            <p class="rating">RATING: {item.rating}</p>
+          </div>
+          <div className='button-wrapper'>
+          <p class="description">{item.description.slice(0, 40)}</p>
+            <button class="btn add-to-cart" onClick={() => handleClick(item.id)}>Add to Cart</button>
+          </div>
         </div>
-      ))}
-    </div>
+       
+    ))}
+</div>
+      
       </Layout>
     </div>
   );
@@ -67,39 +86,4 @@ const Sunglasses = () => {
 export default Sunglasses
 
 
-// <div className='heading'>
-// <h2>HOMEDECORATION</h2>
-// {/* <button className='Btn' onClick={handleLogout}>Logout</button> */}
-// </div>
-//   <CarouselComponent/>
-  
-  
-//   <div className='main-container'>
-
-// {/* <button onClick={handleLogout}>Logout</button> */}
-//   {products && products
-//       .filter((item) => ['home-decoration'].includes(item.category))
-
-//       .map((item) => (
-
-//     <div key={item._id} className="blog-item">
-//      <div class="product-card">
-// <img src={`${item.thumbnail}`} alt="Thumbnail" />
-// <div class="product-info">
-// <p class="title">{item.title}</p>
-// <p class="brand">{item.brand}</p>
-// <p class="description">{item.description.slice(0, 100)}</p>
-// <div class="details">
-//   <p class="price">{item.price}</p>
-//   <p class="rating">{item.rating}</p>
-//   <p class="category">{item.category}</p>
-// </div>
-// <button class="add-to-cart" onClick={() => handleClick(item.id)}>Add to Cart</button>
-// </div>
-// </div>
-
      
-
-//     </div>
-//   ))}
-// </div>

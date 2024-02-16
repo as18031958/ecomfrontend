@@ -23,7 +23,7 @@ const Layout = ({children,title,description,keywords,author}) => {
 
 
         <Headers/>
-        <main style={{minHeight:'fit-Content'}}>
+        <main style={{minHeight:'90vh'}}>
           <Toaster/>
           {children}</main>
         <Footer/>

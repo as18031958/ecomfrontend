@@ -65,6 +65,14 @@ const productSlice = createSlice({
       }
     },
   },
+
+  removeAllFromCart: (state, action) => {
+    state.cart = []; // Empty the cart state
+    state.total = 0; // Reset total
+},
+
+  
+
   extraReducers: builder => {
     builder.addCase(fetchProducts.fulfilled, (state, action) => {
       state.products = action.payload;

@@ -16,7 +16,7 @@ export const DyanamicComp = () => {
   useEffect(() => {
     dispatch(fetchProducts());
   }, [dispatch]);
-  // toast.success("")
+
 
   const handleClick = (itemId) => {
     dispatch(addToCart(itemId)); // Use addToCart action instead of AddToCart
@@ -26,14 +26,12 @@ export const DyanamicComp = () => {
   return (
         <div>
           <Layout title={'Home-page'}>
-            <div className='heading'>
-              <h2>SUNGLASSES</h2>
-            </div>
+            
             
             <div className='main-container'>
               {products && products
                 .filter((item) => item.id === parseInt(paremid))
-                // .filter((item) => ['sunglasses'].includes(item.category))
+                
                 .map((item) => (
                   <div key={item._id} className="blog-item">
                     <div class="product-card">

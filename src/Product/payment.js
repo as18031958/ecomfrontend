@@ -41,7 +41,11 @@ const Payment = () => {
       // Clear cartItems or update state as needed
       localStorage.removeItem("cartItems");
       dispatch(removeFromCart([]));
-      navigate("/");
+      setTimeout(() => {
+        navigate("/");
+        // toast.dismiss(toastId);
+      }, 1000);
+      // navigate("/");
       toast.success("Payment Completed Successfully");
     } catch (error) {
       console.error("Error processing payment:", error);

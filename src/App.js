@@ -13,6 +13,8 @@ import Sunglasses from './Product/sunglasses';
 import AddToCart from './Product/Addtocart';
 import Payment from './Product/payment';
 import { DyanamicComp } from './Product/Dyanamic ';
+import { Pro } from './Pages/Pro';
+
 
 
 
@@ -32,6 +34,7 @@ function App() {
       <Route path='/payment'   element={<Payment/>}/>
       <Route path='/about' element={<About/>}/>
       <Route path='/contact' element={<Contact/>}/>
+      <Route path='/pro' element={<Pro/>}/>
       <Route path='/dynamic/:id' element={<DyanamicComp/>}/>
       <Route path='*' element={<Pagenotfound/>}/>
     </Routes>

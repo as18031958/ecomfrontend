@@ -5,16 +5,11 @@
   margin: 1;
   padding: 1;
   box-sizing: border-box;
+  
 }
-/* font-family: "Poppins", sans-serif; */
 
-.footer{
-  height: 60px;
-  width:100% ;
-  text-align: center;
-  background-color: dimgray;
-  font-size: 15px;
-}
+
+
 .about{
   margin-top: 50px;
 }
